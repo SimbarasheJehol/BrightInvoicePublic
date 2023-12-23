@@ -2,10 +2,16 @@ name: Django CI
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+    - master
+    - development
+    - main
 
+  pull_request:
+    branches: 
+    - master
+    - development
+    - main
 jobs:
   build:
 
@@ -25,6 +31,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Install pre commit & Bandit
+      run: |
+        pip install bandit
+        pip install pre-commit
+    - name: Run Bandit
+      run: bandit -r . -ll
+
     - name: Run Tests
       run: |
         python manage.py test
