@@ -18,7 +18,7 @@ et-xmlfile==1.1.0
 executing==1.2.0
 idna==3.4
 importlib-metadata==5.1.0
-ipykernel==6.19.2
+ipykernel
 ipython==8.7.0
 itsdangerous==2.1.2
 jedi==0.18.2
