@@ -104,5 +104,5 @@ function drawTable(data, table_name) {
             ],
         });
     }
-    catch (e){};
-};
+    catch (e){}
+}
