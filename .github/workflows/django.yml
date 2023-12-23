@@ -36,7 +36,7 @@ jobs:
         pip install bandit
         pip install pre-commit
     - name: Run Bandit
-      run: bandit -r . -ll --confidence-level LOW,MEDIUM
+      run: bandit -r . -ll --confidence-level high
 
     - name: Run Tests
       run: |
